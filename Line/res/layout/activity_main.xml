@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/all_match"
+    android:orientation="horizontal">
+    
+    <LinearLayout 
+        android:id="@+id/menu"
+        android:layout_width="180dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp" >     
+             <RelativeLayout
+                style="@style/all_match" >
+
+                <Button
+                    android:id="@+id/btn_login"
+                    style="@style/all_wrap"
+                    android:background="@drawable/ic_login_bg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:clickable="true" />
+                <Button
+                    android:id="@+id/btn_reg"
+                    style="@style/all_wrap"
+                    android:layout_below="@id/btn_login"
+                    android:background="@drawable/ic_reg_bg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:clickable="true" />
+            </RelativeLayout>
+             <RelativeLayout
+                style="@style/all_match" >
+                   <ImageView android:id="@+id/userIcon"
+	                    android:layout_width="60dp"
+	                    android:layout_height="60dp"
+	                    android:layout_marginLeft="10dp"
+	                    android:layout_marginRight="5dp"
+	                    android:layout_centerVertical="true">
+                    </ImageView>
+                    <TextView android:id="@+id/nickName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/media_text_size"
+                        android:layout_toRightOf="@id/userIcon"
+                        android:layout_marginBottom="10dp"
+                        android:layout_alignBottom="@id/userIcon"></TextView>
+                </RelativeLayout>
+        </FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rectangle_menu_shadow" />
+
+        <ScrollView
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:scrollbars="none" >
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                style="@style/match_wrap"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/menu_sy"
+                    android:checked="true"
+                    style="@style/radio_style"
+                    android:text="@string/menu_1_1" />
+
+                <RadioButton
+                    android:id="@+id/menu_1_2"
+                    style="@style/radio_style"
+                    android:text="@string/menu_1_2"/>
+
+                <RadioButton
+                    android:id="@+id/menu_1_3"
+                    style="@style/radio_style"
+                    android:text="@string/menu_1_3"/>
+
+                <RadioButton
+                    android:id="@+id/menu_1_4"
+                    style="@style/radio_style"
+                    android:text="@string/menu_1_4"/>
+            </RadioGroup>
+        </ScrollView>
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/content"
+        style="@style/all_match" >
+
+        <TextView
+            android:id="@+id/content_shadow"
+            android:layout_width="4dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle_content_shadow" />
+
+        <RelativeLayout
+            android:background="@drawable/ic_title_bg"
+            android:id="@+id/content_title"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@id/content_shadow" >
+
+            <TextView
+                android:id="@+id/menu_button"
+                style="@style/wrap_match"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_option_bg"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/app_title"
+                style="@style/title_style"
+                android:gravity="center"
+                android:text="@string/menu_1_1"
+                android:layout_centerVertical="true" />
+
+            <Button
+                android:id="@+id/uploadBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/bar_1_right"
+                style="@style/small_text_size" >
+            </Button>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/contentView"
+            style="@style/all_match"
+            android:layout_below="@id/content_title"
+            android:background="@color/white" >
+        </FrameLayout>
+    </RelativeLayout>
+    
+</LinearLayout>
